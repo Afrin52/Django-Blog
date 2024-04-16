@@ -8,5 +8,6 @@ urlpatterns = [
     # path('<slug:slug>/', views.BlogDetail.as_view(), name='blog_detail'),
     # path('<slug:slug>/', views.BlogListView.as_view(), name='blog_list_view'),
     path('<slug:slug>/', views.post_detail, name='post_detail'),
+    path('send_email/', views.blog_post_email, name='send_email'),
     path('search/', views.search, name='search'),
 ]

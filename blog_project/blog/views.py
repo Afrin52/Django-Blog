@@ -51,7 +51,7 @@ def blog_post_list(request):
     return render(request, 'blog_list.html', {'posts': posts})
 
 # share blog through email
-def blog_post_list(request, pk):
+def blog_post_email(request, pk):
     posts = Blog.objects.get(id=pk)
     subject = "share blog through email"
     message = "Dear" + " " + str(posts.author.first_name)  + " " +  str(posts.author.last_name)
